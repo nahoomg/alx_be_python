@@ -1,5 +1,7 @@
 import unittest
-from .simple_calculator import SimpleCalculator
+# IMPORTANT: This import is specific to the checker's requirement and local testing setup.
+# It assumes simple_calculator.py is directly importable.
+from simple_calculator import SimpleCalculator
 
 class TestSimpleCalculator(unittest.TestCase):
     """
@@ -32,7 +34,7 @@ class TestSimpleCalculator(unittest.TestCase):
     def test_addition_floats(self):
         """Test addition with floating-point numbers."""
         self.assertEqual(self.calc.add(2.5, 3.5), 6.0)
-        self.assertAlmostEqual(self.calc.add(0.1, 0.2), 0.3) # Use assertAlmostEqual for floats
+        self.assertAlmostEqual(self.calc.add(0.1, 0.2), 0.3)
 
     # --- Test Subtraction ---
     def test_subtract_positive_numbers(self):
@@ -107,7 +109,7 @@ class TestSimpleCalculator(unittest.TestCase):
     def test_divide_by_zero(self):
         """Test division by zero, which should return None."""
         self.assertIsNone(self.calc.divide(10, 0))
-        self.assertIsNone(self.calc.divide(0, 0)) # Even 0/0 is typically undefined, here it matches the function's contract of returning None.
+        self.assertIsNone(self.calc.divide(0, 0))
 
     def test_divide_floats(self):
         """Test division with floating-point numbers."""
