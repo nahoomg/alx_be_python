@@ -18,9 +18,15 @@ def get_weather_recommendation():
     elif weather == "cold":
         print("Make sure to wear a warm coat and a scarf.")
     else:
-        # Handle cases where the input does not match the predefined conditions
         print("Sorry, I don't have recommendations for this weather.")
 
 # Call the function to run the program
 if __name__ == "__main__":
     get_weather_recommendation()
+# This script provides clothing recommendations based on the current weather conditions.
+
+# It handles unexpected input gracefully by providing a default message.
+# The user is prompted to input the weather condition, and the script responds accordingly.# The recommendations are tailored to common weather conditions: sunny, rainy, and cold.
+# If the input does not match any of these conditions, a default message is displayed.  
+else:
+    print("Invalid input. Please enter sunny, rainy, or cold.")
